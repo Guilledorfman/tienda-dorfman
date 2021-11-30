@@ -1,7 +1,7 @@
 import React from 'react'
-import '../App.css'
-import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
-import CartWidget from './CartWidget';
+import '../../App.css'
+import "bootstrap/dist/js/bootstrap.min";
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
