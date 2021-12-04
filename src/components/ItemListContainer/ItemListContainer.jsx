@@ -1,36 +1,24 @@
-import React from 'react'
-import ItemCount from '../ItemCount/ItemCount'
+import React,{useState, useEffect} from 'react'
+import { getFetch } from '../../helpers/getFetch'
+import ItemList from '../ItemList/ItemList'
+import './ItemListContainer.css'
+
 
 const ItemListContainer = () => {
-    const productos = [
-        {
-            name: 'Producto 1',
-            description: 'Descripción del Producto 1',
-            stock: 10,
-            id: 1
-        },{
-            name: 'Producto 2',
-            description: 'Descripción del Producto 2',
-            stock: 5,
-            id: 2
-        },{
-            name: 'Producto 3',
-            description: 'Descripción del Producto 3',
-            stock: 53,
-            id: 3
-        }
-    ]
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    //recorre el array de productos y retorna un componente por cada uno
-    const productList = productos.map(producto=>{
-        return(
-            <ItemCount key={producto.id} name={producto.name} description={producto.description} stock={producto.stock}/>
-        )
-    })
+    
+    useEffect(() => {
+        getFetch.then(res=> setProducts(res))
+        .catch(err=> console.log(err))
+        .finally(()=> setLoading(false))
+    },[]);
+
 
     return (
-        <div className="d-flex flex-wrap justify-content-around text-center">
-            {productList}
+        <div className="main-content d-flex flex-wrap justify-content-around text-center">
+            {loading ? <img className="loading" src="https://support.lenovo.com/esv4/images/loading.gif" alt="LOADING..."/>: <ItemList data={products}/>}
         </div>
     )
 }

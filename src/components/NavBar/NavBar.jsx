@@ -1,17 +1,17 @@
 import React from 'react'
-import '../../App.css'
+import './NavBar.css'
 import "bootstrap/dist/js/bootstrap.min";
 import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     return (
-            <nav className="px-5 navbar navbar-expand-lg navbar-light bg-light border-4 border-bottom border-warning">
-                <a href="/" className="navbar-brand ubuntu fs-3">Tienda<span className="ubuntu text-warning">Dorfman</span></a>
+            <nav className="px-5 navbar navbar-expand-lg bg-dark border-4 border-bottom border-warning">
+                <a href="/" className="navbar-brand ubuntu text-light fs-3">Tienda<span className="ubuntu text-warning">Dorfman</span></a>
                 <div className="d-flex flex-row order-2 order-lg-3">
                     <ul className="navbar-nav flex-row">
                         <li className="nav-item m-auto"><CartWidget/></li>
                     </ul>
-                    <button className="navbar-toggler mx-4" data-bs-toggle="collapse" data-bs-target="#menu-nav">
+                    <button className="navbar-toggler navbar-dark mx-4" data-bs-toggle="collapse" data-bs-target="#menu-nav">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                 </div>
@@ -19,7 +19,7 @@ const NavBar = () => {
                 <div id="menu-nav" className="collapse navbar-collapse order-3 order-lg-2">
                     <ul className="navbar-nav ml-auto align-items-center">
                         <li className="nav-item mx-4">
-                            <button className="btn-warning dropdown me-auto my-3">
+                            <button className="btn btn-outline-warning dropdown me-auto my-3">
                                 <a href="#" className="nav-link dropdown-toggle text-light" role="button" data-bs-toggle="dropdown">
                                     Categorías
                                 </a>
@@ -38,7 +38,7 @@ const NavBar = () => {
                             </form>
                         </li>
                         <li className="nav-item mx-4">
-                            <a className="nav-link" href="#">Ayuda</a>
+                            <a className="nav-link text-light" href="#">Ayuda</a>
                         </li>
                     </ul>
                 </div>
