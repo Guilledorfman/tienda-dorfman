@@ -26,14 +26,14 @@ const Product = ({name, photo, price, description, stock}) => {
     }
 
     return (
-            <div className="card m-1 mb-5 border-0">
+            <div className="itemCard card m-1 mb-5 border-0">
                 <img src={photo} className="card-img-top" alt={name}/>
                 <div className="card-body">
                     <h2 className="card-title">
                         {name}
                     </h2>
                     <h5>${price}</h5>
-                    <p className="card-text">{description}</p>
+                    {/* <p className="card-text">{description}</p> */}
                     <h5 className={stockClass}>Stock: {stock}</h5>
                     <div className="d-flex justify-content-evenly">
                         <button onClick={removeProduct}  className="btn btn-warning">-</button>

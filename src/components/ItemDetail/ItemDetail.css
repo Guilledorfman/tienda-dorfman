@@ -1,0 +1,35 @@
+.ItemDetail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.ItemDetail> .card{
+    width: 50rem;
+    min-width: 300px;
+    height: 35rem;
+    overflow: auto;
+}
+.product-info{
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+}
+.buy-tab, .price{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.buy-btn{
+    width: 100%;
+}

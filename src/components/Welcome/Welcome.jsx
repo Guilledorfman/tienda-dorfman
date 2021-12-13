@@ -9,7 +9,7 @@ const Welcome = () => {
                     <Carousel.Item className="carousel-item">
                         <img
                         className="d-block w-100"
-                        src="http://placeimg.com/1000/500/people"
+                        src="https://cdn.korg.com/es/products/upload/c8300f93b5915d43a72821e7aeee23de.jpg"
                         alt="First slide"
                         />
                         <Carousel.Caption className="caption">
@@ -20,7 +20,7 @@ const Welcome = () => {
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="http://placeimg.com/1000/500/tech"
+                        src="https://cdn.korg.com/es/products/upload/7fdcd5d2861bfb6cf2ced09f6ae110a8.jpg"
                         alt="Second slide"
                         />
 
@@ -32,7 +32,7 @@ const Welcome = () => {
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="http://placeimg.com/1000/500/arch"
+                        src="https://cdn.korg.com/es/products/upload/ecc9eb011296db4a50974b3b18c100d7.jpg"
                         alt="Third slide"
                         />
 

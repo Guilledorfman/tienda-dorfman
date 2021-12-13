@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom'
+
 import React from 'react'
 import './NavBar.css'
 import "bootstrap/dist/js/bootstrap.min";
@@ -6,11 +8,15 @@ import CartWidget from '../CartWidget/CartWidget';
 const NavBar = () => {
     return (
             <nav className="px-5 navbar navbar-expand-lg bg-dark border-4 border-bottom border-warning">
-                <a href="/" className="navbar-brand ubuntu text-light fs-3">Tienda<span className="ubuntu text-warning">Dorfman</span></a>
+                <Link to={`/`}>
+                    <h1 className="navbar-brand ubuntu text-light fs-3">Tienda<span className="ubuntu text-warning">Dorfman</span></h1>
+                </Link>
                 <div className="d-flex flex-row order-2 order-lg-3">
-                    <ul className="navbar-nav flex-row">
-                        <li className="nav-item m-auto"><CartWidget/></li>
-                    </ul>
+                    <div className="navbar-nav flex-row">
+                        <Link to={"/cart"}>
+                            <span className="nav-item m-auto"><CartWidget/></span>
+                        </Link>
+                    </div>
                     <button className="navbar-toggler navbar-dark mx-4" data-bs-toggle="collapse" data-bs-target="#menu-nav">
                         <span className="navbar-toggler-icon"></span>
                     </button>
