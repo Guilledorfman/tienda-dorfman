@@ -14,7 +14,7 @@ const ItemDetail = ({data}) => {
     }
     function addProduct(){
 
-        productNumber < data.stock ? setProductNumber(productNumber + 1) : alertStock();
+        productNumber < data[0].stock ? setProductNumber(productNumber + 1) : alertStock();
     
     }
     function removeProduct(){
@@ -28,18 +28,18 @@ const ItemDetail = ({data}) => {
             <div className="card">
                 <div className="row g-0">
                     <div className="col-md-8">
-                        <img src="https://cdn.korg.com/es/products/upload/8e509f6017cffae8ac5fd3cd981b6207_pc.jpg" className="detailImg img-fluid rounded-start" alt="Microkorg"/>
-                        <p className="product-info">{data.description}</p>
+                        <img src={data[0].photo} className="detailImg img-fluid rounded-start" alt={data[0].name}/>
+                        <p className="product-info">{data[0].description}</p>
                     </div>
                     <div className="col-md-4">
                         <div className="buy-tab mt-5">
-                            <h5 className="title">{data.name}</h5>
-                            <p className="text">{data.type}</p>
+                            <h5 className="title">{data[0].name}</h5>
+                            <p className="text">{data[0].type}</p>
                             <p className="text"><small className="text-muted">Last updated 3 mins ago</small></p>
                         </div>
                         <div className="price">
-                            <h2>$80.500</h2>
-                            <h5 className={stockClass}>Stock: {data.stock}</h5>
+                            <h2>${data[0].price}</h2>
+                            <h5 className={stockClass}>Stock: {data[0].stock}</h5>
                     <div className="buy-btn d-flex justify-content-between">
                         <button onClick={removeProduct} className="btn btn-warning">-</button>
                         <h2 className="">{productNumber}</h2>

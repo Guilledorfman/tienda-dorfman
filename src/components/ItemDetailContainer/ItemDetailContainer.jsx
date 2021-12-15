@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
+import { useParams } from 'react-router-dom'
 import { getFetch } from '../../helpers/getFetch'
 import styles from './ItemDetailContainer.css'
 
@@ -7,13 +8,22 @@ const ItemDetailContainer = () => {
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
 
+    const { idItem } = useParams()
 
     
     useEffect(() => {
-        getFetch.then(res=> setProduct(res[15]))
-        .catch(err=> console.log(err))
-        .finally(()=> setLoading(false))
-    },[]);
+        if(idItem){
+            getFetch.then(res=> setProduct(res.filter(prod => prod.id === parseInt(idItem))))
+            .catch(err=> console.log(err))
+            .finally(()=> setLoading(false))
+        }else{
+            getFetch.then(res=> setProduct(res))
+            .catch(err=> console.log(err))
+            .finally(()=> setLoading(false))
+
+        }
+    },[idItem]);
+
 
     return (
         <div className="ItemDetailContainer">

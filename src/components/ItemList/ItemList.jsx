@@ -8,7 +8,7 @@ const ItemList = ({data}) => {
     // recorre el array de productos y retorna un componente por cada uno
     const productList = data.map(producto=>{
         return(
-                <Item key={producto.id} name={producto.name} price={producto.price} photo={producto.photo} description={producto.description} stock={producto.stock}/>
+                <Item key={producto.id} name={producto.name} price={producto.price} photo={producto.photo} description={producto.description} stock={producto.stock} type={producto.type} id={producto.id}/>
         )
     })
     return (

@@ -9,6 +9,7 @@
     min-width: 300px;
     height: 35rem;
     overflow: auto;
+    background-color: white;
 }
 .product-info{
     width: 100%;

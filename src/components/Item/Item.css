@@ -1,14 +1,33 @@
 .card{
         height: 300px;
-        width: 200px;
+        width: 350px;
         position: relative;
         overflow: hidden;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.card:nth-child(5n+1){
+    background-color: rgba(255, 12, 4, 0.822);
+}
+.card:nth-child(5n+2){
+    background-color: rgba(180, 255, 4, 0.822);
+}
+.card:nth-child(5n+3){
+    background-color: rgba(50, 4, 255, 0.822);
+}
+.card:nth-child(5n+4){
+    background-color: rgba(4, 255, 150, 0.822);
+}
+.card:nth-child(5n+5){
+    background-color: rgba(255, 4, 150, 0.822);
 }
 .card-img-top{
-    width: 200px;
-    height: 300px;
+    margin: auto;
+    padding-bottom: 70px;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
+    transition: all 1s ease;
 }
 .stock{
     transition: all .2s ease;
@@ -21,16 +40,43 @@
     transform: scale(110%);
     color: red;
 }
+.link-item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 300000;
+}
 .card-body{
-
-    background-color: rgb(255, 255, 255);
+    width: 100%;
+    background-color: #ffffff;
     height: 300px;
     transform: translateY(210px);
     transition: all .5s ease;
     position: absolute;
 }
+.itemCard{
+    transition: all .5s ease;
+}
+.card-title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .itemCard:hover .card-body{
+    background-color: #ffffffc7;
     transform: translateY(0px);
-    box-shadow: 0px -12px 20px 10px rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+}
+.itemCard:hover .card-img-top{
+    filter: blur(4px);
+}
+.itemCard:hover{
+    transform: scale(105%);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.badge{
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    z-index: 5000;
+}

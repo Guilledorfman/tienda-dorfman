@@ -26,14 +26,14 @@ const NavBar = () => {
                     <ul className="navbar-nav ml-auto align-items-center">
                         <li className="nav-item mx-4">
                             <button className="btn btn-outline-warning dropdown me-auto my-3">
-                                <a href="#" className="nav-link dropdown-toggle text-light" role="button" data-bs-toggle="dropdown">
+                                <div className="nav-link dropdown-toggle text-light" role="button" data-bs-toggle="dropdown">
                                     Categorías
-                                </a>
+                                </div>
                                 <ul className="dropdown-menu">
-                                    <li><a href="#" className="dropdown-item">Rojos</a></li>
-                                    <li><a href="#" className="dropdown-item">Amarillos</a></li>
-                                    <li><a href="#" className="dropdown-item">Verdes</a></li>
-                                    <li><a href="#" className="dropdown-item">Azules</a></li>
+                                    <li className="dropdown-item"><Link to={'/categoria/sintetizadores'}>Teclados y sintetizadores</Link></li>
+                                    <li className="dropdown-item"><Link to={'/categoria/sonido'}>Sonido y grabación</Link></li>
+                                    <li className="dropdown-item"><Link to={'/categoria/efectos'}>Efectos</Link></li>
+                                    <li className="dropdown-item"><Link to={'/categoria/accesorios'}>Accesorios</Link></li>
                                 </ul>
                             </button>
                         </li>
@@ -43,18 +43,18 @@ const NavBar = () => {
                                 <button className="btn btn-outline-warning" type="submit">Buscar</button>
                             </form>
                         </li>
-                        <li className="nav-item mx-4">
-                            <a className="nav-link text-light" href="#">Ayuda</a>
+                        <li className="nav-item mx-4 text-light">
+                            Ayuda
                         </li>
                     </ul>
                 </div>
                 <div className="dropdown">
-                    <a href="#" className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                    <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
                         <i className="fas fa-user-circle fs-1 text-warning mr-2"></i>
-                    </a>
+                    </div>
                     <ul className="dropdown-menu">
-                        <li role='presentation'><a href="#" className="dropdown-item">Mi cuenta</a></li>
-                        <li role='presentation'><a href="#" className="dropdown-item">Cerrar sesión</a></li>
+                        <li role='presentation'><div className="dropdown-item">Mi cuenta</div></li>
+                        <li role='presentation'><div className="dropdown-item">Cerrar sesión</div></li>
                     </ul>
                 </div>
             </nav>
