@@ -3,7 +3,7 @@ import styles from './ItemDetail.css'
 
 const ItemDetail = ({data}) => {
 
-    const [productNumber, setProductNumber] = useState(0);
+    const [productNumber, setProductNumber] = useState(1);
     const [stockClass, setStockClass] = useState('stock available');
 
     function alertStock(){
@@ -19,7 +19,7 @@ const ItemDetail = ({data}) => {
     }
     function removeProduct(){
 
-        if(productNumber > 0){
+        if(productNumber > 1){
             setProductNumber(productNumber-1);
         }
     }
