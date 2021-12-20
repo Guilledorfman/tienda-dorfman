@@ -36,15 +36,8 @@ const Product = ({name, photo, price, description, stock, type, id}) => {
                         {name}
                     </h2>
                     <h5>${price}</h5>
-                    <h5 
-                    // className={stockClass}
-                    >
-                        Stock: {stock}</h5>
-                    {/* <div className="d-flex justify-content-evenly">
-                        <button onClick={removeProduct}  className="btn btn-warning">-</button>
-                        <h2 className="">{productNumber}</h2>
-                        <button onClick={addProduct}  className="btn btn-warning">+</button>
-                    </div> */}
+                    <h5>Stock: {stock}</h5>
+
                     <Link to={`/item/${id}`} className="btn btn-warning mt-3 fs-5">Ver detalle</Link>
                 </div>
             </div>

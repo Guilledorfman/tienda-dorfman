@@ -1,4 +1,4 @@
-.card{
+.itemCard{
         height: 300px;
         width: 350px;
         position: relative;
@@ -6,19 +6,19 @@
 }
 
 
-.card:nth-child(5n+1){
+.itemCard:nth-child(5n+1){
     background-color: rgba(255, 12, 4, 0.822);
 }
-.card:nth-child(5n+2){
+.itemCard:nth-child(5n+2){
     background-color: rgba(180, 255, 4, 0.822);
 }
-.card:nth-child(5n+3){
+.itemCard:nth-child(5n+3){
     background-color: rgba(50, 4, 255, 0.822);
 }
-.card:nth-child(5n+4){
+.itemCard:nth-child(5n+4){
     background-color: rgba(4, 255, 150, 0.822);
 }
-.card:nth-child(5n+5){
+.itemCard:nth-child(5n+5){
     background-color: rgba(255, 4, 150, 0.822);
 }
 .card-img-top{
