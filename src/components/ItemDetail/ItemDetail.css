@@ -16,19 +16,33 @@
 }
 .colors{
     width: 100%;
-    height: 80px;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .color{
-    width: 40px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
+    z-index: 50000;
+    opacity: 0;
+}
+.color:checked ~ .foto{
+    opacity: .5;
+    /* background-color: red; */
+}
+.foto{
+    width: 80px;
+    position: absolute;
 }
 .colorOption{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+}
+.colorOption:hover{
+    background-color:rgba(224, 211, 255, 0.349);
+    border-radius: 30px;
 }
 .sinstock{
     position: absolute;

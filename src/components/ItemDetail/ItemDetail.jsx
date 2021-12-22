@@ -6,17 +6,8 @@ import styles from './ItemDetail.css'
 
 const ItemDetail = ({data}) => {
     
-    
-    const colors= [
-        { value: data[0].photo, id: 1, text:'original', url: data[0].photo},
-        { value: 'https://craftypixels.com/placeholder-image/1000x600/d9534f/fff&text=Rojo',id: 2, text:'rojo'},
-        { value: 'https://craftypixels.com/placeholder-image/1000x600/0275d8/fff&text=Azul',id: 3, text:'azul'},
-        { value: 'https://craftypixels.com/placeholder-image/1000x600/5cb85c/fff&text=Verde',id: 4, text:'verde'},
-        { value: 'https://craftypixels.com/placeholder-image/1000x600/f0ad4e/fff&text=Amarillo',id: 5, text:'amarillo'}
-    ]
-    
 
-    const [option, setOption] = useState(data[0].photo);
+    const [option, setOption] = useState(data[0].colors[0].img);
 
 
     function optionSelected(value){
@@ -39,7 +30,7 @@ const ItemDetail = ({data}) => {
                         
                     <hr/>
                     <div className="colors">
-                        <ColorPicker colors={colors} onSelect={optionSelected} defaultOption={option}/> 
+                        <ColorPicker colors={data[0].colors} onSelect={optionSelected} defaultOption={option}/> 
                     </div>
                     <hr/>
                     </div>

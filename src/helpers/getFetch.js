@@ -3,8 +3,14 @@ const productos = [
         name: 'Volca Sample',
         category:`sintetizadores`,
         type:"DIGITAL SAMPLE SEQUENCER",
-        price: 45,
-        photo:'https://cdn.korg.com/es/products/upload/ec4b78bc121b7df43a942d2ad77f42a5_pc.png',
+        price: 29.127,
+        colors: [
+            {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193645/coderhouse-react-tienda/volcasample_kny5fi.png',
+                id: 1
+            }
+        ],
         description: `
 
         Intuitivo y ultra-potente secuenciador volca 
@@ -25,14 +31,20 @@ const productos = [
         ・ MIDI In para disparar muestras, sincronización y cambiar parámetros desde cualquier dispositivo MIDI
         ・ Tamaño compacto, funcionamiento por baterías y altavoz incorporado para disfrutar donde quieras
     `,
-        stock: 10,
+        stock: 5,
         id: 1
     },{
         name: 'Volca Keys',
         category:`sintetizadores`,
         type:"ANALOGUE LOOP SYNTH",
-        price: 1160,
-        photo:'https://cdn.korg.com/es/products/upload/843f90ac26b93b84e9ff9f27445deed2_pc.png',
+        price: 27.302,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193676/coderhouse-react-tienda/volcakeys_ekpnch.png',
+                id: 1
+            }
+        ],
         description: `
 
         El sintetizador polifónico que has estado esperando
@@ -50,14 +62,20 @@ const productos = [
         •    Tamaño compacto, funcionamiento por baterías y altavoz incorporado para disfrutar donde quieras
     
     `,
-        stock: 5,
+        stock: 4,
         id: 2
     },{
         name: 'Volca Bass',
         category:`sintetizadores`,
         type:"ANALOGUE BASS MACHINE",
-        price: 99,
-        photo:'https://cdn.korg.com/es/products/upload/b40a40caebd1992649538df2c36b7c97_pc.png',
+        price: 30.326,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193300/coderhouse-react-tienda/volcabass_vvmxy7.png',
+                id: 1
+            }
+        ],
         description: `
 
     Potente sonido de bajo analógico
@@ -74,14 +92,20 @@ const productos = [
     •    Tamaño compacto, funcionamiento por baterías y altavoz incorporado para disfrutar donde quieras
 
 `,
-        stock: 53,
+        stock: 0,
         id: 3
     },{
         name: 'Volca Beats',
         category:`sintetizadores`,
         type:"ANALOGUE RHYTHM MACHINE",
-        price: 40,
-        photo:'https://cdn.korg.com/es/products/upload/0072f53e964de9fe413c8dbc587fec97_pc.png',
+        price: 37.011,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193304/coderhouse-react-tienda/volcabeats_j1u9gp.png',
+                id: 1
+            }
+        ],
         description: `
 
         Potentes sonidos analógicos de batería
@@ -104,8 +128,14 @@ const productos = [
         name: 'Volca Kick',
         category:`sintetizadores`,
         type:"ANALOGUE KICK GENERATOR",
-        price: 660,
-        photo:'https://cdn.korg.com/es/products/upload/f00edfcce3e226240a3772f9354593c9_pc.png',
+        price: 29.880,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193300/coderhouse-react-tienda/volcakick_wsemy7.png',
+                id: 1
+            }
+        ],
         description: `
         El volca kick genera potentes sonidos bombo con gran presencia, usando un circuito completamente analógico. 
         Para crear esos sonidos, no utiliza una típica onda sinusoidal, sino el sonido de filtro oscilante del original MS-20. 
@@ -125,8 +155,14 @@ const productos = [
         name: 'Volca FM',
         category:`sintetizadores`,
         type:"DIGITAL FM SYNTHESIZER",
-        price: 120,
-        photo:'https://cdn.korg.com/es/products/upload/b3773bb133b4062103d9807e45bb300c_pc.png',
+        price: 28.316,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193303/coderhouse-react-tienda/volcafm_bupn4r.png',
+                id: 1
+            }
+        ],
         description: `
         volca fm es un sintetizador digital FM de tres voces que reproduce completamente el motor de sonido de un sintetizador clásico FM, 
         y también proporciona compatibilidad de programas. La intuitiva interfaz de volca facilita manipular los distintivos sonidos FM, aunque 
@@ -139,8 +175,14 @@ const productos = [
         name: 'Volca mix',
         category:`audio`,
         type:"ANALOGUE PERFORMANCE MIXER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/832759cd3522ddb191ff18457bb19db9_pc.png',
+        price: 19.027,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193302/coderhouse-react-tienda/volcamix_n0pehq.png',
+                id: 1
+            }
+        ],
         description: `
         El volca mix es un mezclador analógico de cuatro canales con una interfaz intuitiva y muchas funciones de conectividad. 
         Proporciona dos entradas mono y una entrada estéreo, perfectas para conectar tres unidades volca. Los jacks son mini, 
@@ -150,14 +192,20 @@ const productos = [
         rangos de graves y agudos con un solo mando. Los excelentes filtros de sonido natural que esperas de tu equipo analógico te darán un 
         control total sobre el carácter de tu sonido.
         `,
-        stock: 16,
+        stock: 2,
         id: 7
     },{
         name: 'Volca Drum',
         category:`sintetizadores`,
         type:"DIGITAL PERCUSSION SYNTHESIZER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/7d9e95d93948da4072dadc31fd718325_pc.png',
+        price: 36.761,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193303/coderhouse-react-tienda/volcaedrum_q3x5xp.png',
+                id: 1
+            }
+        ],
         description: `
         Basado en una forma de onda de disparo simple, usa ‘wave folder’ y overdrive para añadir armónicos y distorsión, 
         y después un efecto resonador waveguide da vida al sonido. El motor de sintetizador DSP de seis partes ha sido diseñado con una 
@@ -165,14 +213,20 @@ const productos = [
         Y por supuesto, puedes reproducir esos sonidos desde el secuenciador al estilo volca.
         Añadiendo estos sonidos distintivos a tus ritmos transformarás revolucionariamente tus interpretaciones y producciones.
     `,
-        stock: 16,
+        stock: 3,
         id: 8
     },{
         name: 'Volca Modular',
         category:`sintetizadores`,
         type:"MICRO MODULAR SYNTHESIZER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/237a4a7dd27e2e70ba9045981d645755_pc.png',
+        price: 34.379,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193303/coderhouse-react-tienda/volcamodular_z90xz6.png',
+                id: 1
+            }
+        ],
         description: `
         El volca modular es un sintetizador semi-modular que consta de módulos independientes de sintetizador analógico, 
         efectos digitales y un secuenciador. Cada uno de los módulos ha sido cuidadosamente seleccionado para su 
@@ -181,15 +235,26 @@ const productos = [
         panel. Las conexiones de los módulos a través de un cable pin tienen prioridad sobre las conexiones internas, 
         puenteándolas. 
     `,
-        stock: 16,
+        stock: 5,
         id: 9
     }
     ,{
         name: 'MS-20 mini',
         category:`sintetizadores`,
         type:"MONOFONIC SYNTHESIZER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/3fe56f5a7c7a7e7d10c970eb4aa6f32c_pc.png',
+        price: 104.771,
+        colors: [
+            {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193310/coderhouse-react-tienda/ms-20mini_xxyrl2.png',
+                id: 1
+            },
+            {
+                text:'white monotone',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640195258/coderhouse-react-tienda/ms-20mini-color-whitemonotone_fyba4d.png',
+                id: 2
+            }
+        ],
         description: `
         El KORG MS-20 mini, que reproduce fielmente el clásico MS-20 al 86% del tamaño original, está ahora disponible como un modelo de 
         edición limitada en color blanco. Este modelo es el primer color nuevo que aparece en los casi 40 años desde que la unidad original 
@@ -199,15 +264,21 @@ const productos = [
         sintetizador semi-modular original, ¡este modelo de edición limitada representa una fantástica forma de disfrutar de los clásicos 
         sonidos del MS-20 en cualquier equipo!
     `,
-        stock: 16,
+        stock: 2,
         id: 10
     }
     ,{
         name: 'Monotron DELAY',
         category:`sintetizadores`,
         type:"ANALOGUE RIBBON SYNTHESIZER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/7582573dc0e1f0dc3b6b42d23febc52b_pc.png',
+        price: 8.527,
+        colors: [
+            {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193309/coderhouse-react-tienda/monotrondelay_byq0ue.png',
+                id: 1
+            }
+                ],
         description: `
 
         Retardo Espacial que ofrece ecos de estilo analógico
@@ -226,8 +297,14 @@ const productos = [
         name: 'Monotron DUO',
         category:`sintetizadores`,
         type:"ANALOGUE RIBBON SYNTHESIZER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/9212263563d1775d61e954e7c59915b8_pc.png',
+        price: 8.845,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193309/coderhouse-react-tienda/monotronduo_hyuiwy.png',
+                id: 1
+            }
+        ],
         description: `
 
         Dos osciladores analógicos (VCO) con afinación individual
@@ -239,15 +316,41 @@ const productos = [
         Salida de auriculares para uso en privado
     
     `,
-        stock: 16,
+        stock: 15,
         id: 12
     }
     ,{
         name: 'Monologue',
         category:`sintetizadores`,
         type:"MONOPHONIC ANALOGUE SYNTHESIZER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/6316544e05f1c1fa7c61b12a0ee552f3_pc.png',
+        price: 66.759,
+        colors:[
+            {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640194337/coderhouse-react-tienda/monologue-color-original_jxm7mc.png',
+                id: 1
+            },
+            {
+                text:'gold',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640194248/coderhouse-react-tienda/monologue-color-gold_zmouah.png',
+                id: 2
+            },
+            {
+                text:'dark blue',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640194246/coderhouse-react-tienda/monologue-color-darkblue_ezduw1.png',
+                id: 3
+            },
+            {
+                text:'black',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640194241/coderhouse-react-tienda/monologue-color-black_xkcfxn.png',
+                id: 4
+            },
+            {
+                text:'red',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640194250/coderhouse-react-tienda/monologue-color-red_xwt3pi.png',
+                id: 5
+            }
+        ],
         description: `
 
         Sintetizador analógico con una estructura de síntesis totalmente nueva, optimizada para producir increíbles sonidos monofónicos y secuencias
@@ -261,15 +364,21 @@ const productos = [
         Cinco variaciones de color que destacarán en el escenario o en el estudio
     
     `,
-        stock: 16,
+        stock: 6,
         id: 13
     }
     ,{
         name: 'Minilogue',
         category:`sintetizadores`,
         type:"PHOLYPHONIC ANALOGUE SYNTHESIZER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/aeb062af89e71aaa0f4c67aa3b9e2b0e_pc.png',
+        price: 88.385,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193306/coderhouse-react-tienda/minilogue_cir8qq.png',
+                id: 1
+            }
+        ],
         description: `
 
         Potente y flexible sintetizador polifónico de cuatro voces
@@ -281,15 +390,21 @@ const productos = [
         MIDI, USB-MIDI y Audio Sync para la máxima conectividad en estudio y directo, incluyendo sincronización directa con SQ1, volca, electribe, y más
     
     `,
-        stock: 16,
+        stock: 4,
         id: 14
     }
     ,{
         name: 'Minilogue xd',
         category:`sintetizadores`,
         type:"PHOLYPHONIC ANALOGUE SYNTHESIZER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/baecaf881b2d5620a22801ccdd1df297_pc.png',
+        price: 114.535,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193307/coderhouse-react-tienda/miniloguexd_gm75rl.png',
+                id: 1
+            }
+        ],
         description: `
 
         Síntesis analógica con polifonía de cuatro voces. El circuito de sintetizador analógico de minilogue, cuyo genuino sonido analógico tuvo un enorme impacto
@@ -303,15 +418,21 @@ const productos = [
         500 programas.
 
         `,
-        stock: 16,
+        stock: 3,
         id: 15
     }
     ,{
         name: 'microKORG',
         category:`sintetizadores`,
         type:"SYNTHESIZER/VOCODER",
-        price: 10,
-        photo:'https://cdn11.bigcommerce.com/s-rnl2mce9/images/stencil/640w/products/1277/4779/ko_microkorg__51344.1384578083.png?c=2',
+        price: 68.914,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193305/coderhouse-react-tienda/microkorg_sij57h.webp',
+                id: 1
+            }
+        ],
         description: `
 
         Un auténtico sintetizador con un motor de sonido de modelado analógico
@@ -330,15 +451,21 @@ const productos = [
         Un distintivo diseño y mini-micro incluido
     
     `,
-        stock: 16,
+        stock: 2,
         id: 16
     }
     ,{
         name: 'microKORG S',
         category:`sintetizadores`,
         type:"SYNTHESIZER/VOCODER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/7044a9cd8cdc7ac1aadea5c906e99c15_pc.png',
+        price: 78.830,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193307/coderhouse-react-tienda/microkorgS_iozla9.png',
+                id: 1
+            }
+        ],
         description: `
         El nuevo microKORG S incorpora un sistema de altavoces 2 + 1 con una potencia que excede en mucho a su tamaño. Su cuerpo ofrece un elegante diseño en blanco, 
         e incorpora nuevos presets que representan los sonidos de una nueva generación. Dentro del  sofisticado exterior de microKORG S encontramos un motor de sonido 
@@ -351,8 +478,14 @@ const productos = [
         name: 'microKORG XL +',
         category:`sintetizadores`,
         type:"SYNTHESIZER/VOCODER",
-        price: 10,
-        photo:'https://img.audiofanzine.com/img/product/normal/4/9/49681.png?w=1200&h=675&fit=fill&s=4f1a1dd0706d5e6d240db70ad99bfd06',
+        price: 78.824,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193308/coderhouse-react-tienda/microkorgxl_rssnch.png',
+                id: 1
+            }
+        ],
         description: `
 
         Aún más sonidos clásicos, incluyendo el piano KORG SGproX, el M1 y órganos VOX y conocidos intrumentos de "Cinta".
@@ -365,15 +498,21 @@ const productos = [
         Funcionamiento a baterías para mayor portabilidad.
     
     `,
-        stock: 16,
+        stock: 2,
         id: 18
     }
     ,{
         name: 'kingKORG',
         category:`sintetizadores`,
         type:"SYNTHESIZER",
-        price: 10,
-        photo:'https://cdn.korg.com/es/products/upload/61a164249f61cc0c9da82d1ddaa388fd_pc.png',
+        price: 159.900,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193305/coderhouse-react-tienda/kingkorg_rl6ydt.png',
+                id: 1
+            }
+        ],
         description: `
 
         Un completo sintetizador de modelado analógico, con 61 teclas, diseñado para interpretación en directo
@@ -386,7 +525,7 @@ const productos = [
         Soporta software de librería que te permite gestionar los programas
     
     `,
-        stock: 16,
+        stock: 0,
         id: 19
     },
     {
@@ -394,7 +533,13 @@ const productos = [
         category:`sonido`,
         type:`MONITORES POTENCIADOS`,
         price:65.999,
-        photo:`https://krk.blob.core.windows.net/public/CLASSIC-5/CLASSIC-5-Studio-Monitors-Pair.png`,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193308/coderhouse-react-tienda/krkclassic5_iyvtse.png',
+                id: 1
+            }
+        ],
         description:`
         Tipo: Biamplificado
         Respuesta de frecuencia: 45Hz - 35kHz
@@ -412,7 +557,13 @@ const productos = [
         category:`sonido`,
         type:`MONITORES ACTIVOS MULTIMEDIA`,
         price:`30.435`,
-        photo:`https://ecam.co.tz/712-large_default/mackie-cr3-xbt.jpg`,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193305/coderhouse-react-tienda/mackiecr3xbt_sb6h6r.png',
+                id: 1
+            }
+        ],
         description:`
         Los monitores multimedia Mackie CR3-XBT ponen sonido 
         calidad estudio sobre tu escritorio a un gran precio. 
@@ -430,7 +581,7 @@ const productos = [
         experiencia de audio de escritorio, te van a impresionar los 
         monitores multimedia Mackie CR3-XBT. Incluye código para 
         descargar Pro Tools First y colección de 23 plugins`,
-        stock:1,
+        stock:4,
         id:21
     },
     {
@@ -438,7 +589,13 @@ const productos = [
         category:`efectos`,
         type:`SPACE ECHO`,
         price:`12.000`,
-        photo:`https://static.roland.com/assets/images/products/main/re_20_top_main.jpg`,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193308/coderhouse-react-tienda/re-20_fkekny.jpg',
+                id: 1
+            }
+        ],
         description:`
         Increíble simulación del famoso RE-201 de Roland, con el tono analógico y espacioso del Space Echo original
         Modelado fiel de la saturación de sonido del cabezal magnético y del flutter de cinta del RE-201
@@ -455,7 +612,13 @@ const productos = [
         category:`efectos`,
         type:`DIGITAL DELAY`,
         price:10.000,
-        photo:`https://cdn.shopify.com/s/files/1/0331/4689/6519/products/boss-dd-8-digital-delay-effects-pedal-dd8_2000x.png?v=1583898100`,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193304/coderhouse-react-tienda/dd-8_xnm98j.webp',
+                id: 1
+            }
+        ],
         description:`
         Boss Delay más extenso de la serie compacta, ofrece 11 modos, así como una función de Loop
         controles: Nivel, Retroalimentación, Tiempo, Modo
@@ -472,7 +635,13 @@ const productos = [
         category:`accesorios`,
         type:`CABLES`,
         price:300,
-        photo:`https://d2r9epyceweg5n.cloudfront.net/stores/307/817/products/p060561-5d970d8f12c47a5a8916116847295587-1024-1024.png`,
+        colors: [
+                        {
+                text:'original',
+                img:'https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640193303/coderhouse-react-tienda/cable-interpedal_s9ylmi.png',
+                id: 1
+            }
+        ],
         description:
     `
         Ernie Ball Interpedal Cable 15.24 cm.        
