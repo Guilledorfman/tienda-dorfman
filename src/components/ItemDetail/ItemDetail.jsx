@@ -1,14 +1,29 @@
-import React,{useState, useEffect} from 'react'
+import React,{useState, useContext, useEffect} from 'react'
+import { CartContext } from '../../App';
 import ColorPicker from '../ColorPicker/ColorPicker';
 import ItemCount from '../ItemCount/ItemCount';
-import styles from './ItemDetail.css'
+import './ItemDetail.css'
 
 
 const ItemDetail = ({data}) => {
-    
 
+    const { cartProds } = useContext(CartContext)
     const [option, setOption] = useState(data[0].colors[0].img);
+    const [cartState, setCartState] = useState(false);
 
+
+    useEffect(()=>{
+        isInCart(data[0].id)
+    },[cartProds])
+
+    function isInCart(id){
+        const isItInCart = cartProds.find(prod => prod.id === id);
+        if(isItInCart){
+            setCartState(true);
+        }else{
+            setCartState(false);
+        }
+     }
 
     function optionSelected(value){
         setOption(value);
@@ -23,7 +38,7 @@ const ItemDetail = ({data}) => {
                         {
 
                             data[0].stock === 0 ?
-                            <span class="sinstock badge bg-secondary">SIN STOCK</span> :
+                            <span className="sinstock badge bg-secondary">SIN STOCK</span> :
                             <></>
                             
                         }
@@ -45,9 +60,10 @@ const ItemDetail = ({data}) => {
                             <h2>${data[0].price}</h2>
 
                             {
+
                                 data[0].stock === 0 ?
                                 <h5>Sin stock</h5> :
-                                <ItemCount data={data}/>
+                                <ItemCount data={data} cartState={cartState}/>
 
                             }
                         </div>

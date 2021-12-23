@@ -1,4 +1,5 @@
 import React from 'react'
+import './ColorPicker.css'
 
 const ColorPicker = ({colors, onSelect, defaultOption='original'}) => {
 

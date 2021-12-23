@@ -1,11 +1,16 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useContext} from 'react'
+import { CartContext } from '../../App';
 import {Link} from 'react-router-dom'
-import styles from './ItemCount.css'
-const ItemCount = ({ data }) => {
+import './ItemCount.css'
 
+const ItemCount = ({ data, cartState }) => {
+
+    const { cartProds, setCartProds } = useContext(CartContext)
+    
+    
     const [productNumber, setProductNumber] = useState(1);
     const [stockClass, setStockClass] = useState('stock available');
-    const [cartState, setCartState] = useState(false);
+
 
     function alertStock(){
         setStockClass('stock unavailable')
@@ -14,19 +19,18 @@ const ItemCount = ({ data }) => {
         },200)
     }
     function addProduct(){
-
         productNumber < data[0].stock ? setProductNumber(productNumber + 1) : alertStock();
-    
+        
     }
     function removeProduct(){
-
+        
         if(productNumber > 1){
             setProductNumber(productNumber-1);
         }
     }
 
     function addToCart(){
-        setCartState(true)
+        setCartProds([...cartProds, {product:data[0].name, quantity: productNumber, price: data[0].price, id: data[0].id}])
     }
 
     function goToCart(){
@@ -39,6 +43,7 @@ const ItemCount = ({ data }) => {
     const GoToCartBtn = ()=>{
         return <Link to={"/cart"} className="btn btn-warning mt-3" onClick={goToCart}>Ir al carrito</Link>
     }
+
 
 
         return (

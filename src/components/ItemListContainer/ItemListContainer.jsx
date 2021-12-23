@@ -4,12 +4,15 @@ import { getFetch } from '../../helpers/getFetch'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 
-
 const ItemListContainer = () => {
+
+
+
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 
     const { idCate } = useParams()
+
 
     
     useEffect(() => {
@@ -21,9 +24,11 @@ const ItemListContainer = () => {
             getFetch.then(res=> setProducts(res))
             .catch(err=> console.log(err))
             .finally(()=> setLoading(false))
-
+            
         }
     },[idCate]);
+
+
     
     return (
         <div className="main-content d-flex flex-wrap justify-content-around text-center">

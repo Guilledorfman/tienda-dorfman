@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 import { getFetch } from '../../helpers/getFetch'
-import styles from './ItemDetailContainer.css'
+import './ItemDetailContainer.css'
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState([]);

@@ -8,8 +8,11 @@ import CartWidget from '../CartWidget/CartWidget';
 const NavBar = () => {
     return (
             <nav className="px-5 navbar navbar-expand-lg bg-dark border-4 border-bottom border-warning">
-                <Link to={`/`}>
-                    <h1 className="navbar-brand ubuntu text-light fs-3">Tienda<span className="ubuntu text-warning">Dorfman</span></h1>
+                <Link className="navbar-brand" to={`/`}>
+                    <img className="navbar-logo" src="https://res.cloudinary.com/dxoqq4yvo/image/upload/v1640210537/coderhouse-react-tienda/synthesizer-piano-svgrepo-com_xm16qi.svg" alt="" />
+                    <h1 className="ubuntu text-light fs-3">
+                     Tienda<span className="ubuntu text-warning">Dorfman</span>
+                     </h1>
                 </Link>
                 <div className="d-flex flex-row order-2 order-lg-3">
                     <div className="navbar-nav flex-row">

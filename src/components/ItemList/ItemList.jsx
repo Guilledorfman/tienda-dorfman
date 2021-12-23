@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
+
 import Item from '../Item/Item'
 import './ItemList.css'
 
 
 const ItemList = ({data}) => {
-    
+
+
+
     // recorre el array de productos y retorna un componente por cada uno
     const productList = data.map(producto=>{
         return(

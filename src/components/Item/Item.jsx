@@ -3,28 +3,6 @@ import {Link} from 'react-router-dom'
 import './Item.css'
 
 const Product = ({name, photo, price, description, stock, type, id}) => {
-    // const [productNumber, setProductNumber] = useState(0);
-    // const [stockClass, setStockClass] = useState('stock available');
-
-    // function alertStock(){
-    //     setStockClass('stock unavailable')
-    //     setTimeout(()=>{
-    //         setStockClass('stock available')
-    //     },200)
-    // }
-
-    // function addProduct(){
-
-    //     productNumber < stock ? setProductNumber(productNumber + 1) : alertStock();
-    
-    // }
-
-    // function removeProduct(){
-
-    //     if(productNumber > 0){
-    //         setProductNumber(productNumber-1);
-    //     }
-    // }
 
     return (
         <div className="itemCard card m-1 mb-5 border-0">
