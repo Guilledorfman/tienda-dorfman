@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { createContext, useState } from 'react'
-import { ArrayPrueba } from "./ArrayPrueba";
+import { useContext, useState } from 'react'
+
+import { CartContext } from "./helpers/CartContext";
+
 
 import "bootstrap/dist/css/bootstrap.css"
 import NavBar from './components/NavBar/NavBar'
@@ -11,14 +13,13 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import CartContainer from "./components/CartContainer/CartContainer";
 
 
-export const CartContext = createContext([])
-
-function App() {
+function App({}) {
+  
   const [cartProds, setCartProds] = useState([])
 
   return (
     <div className="main-cont">
-      <CartContext.Provider value={{ cartProds, setCartProds }}>
+      <CartContext.Provider value={ { cartProds, setCartProds }}>
         <BrowserRouter>
           <NavBar/>
           <Welcome/>

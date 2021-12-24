@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { CartContext } from '../../App'
-
+import {CartContext} from '../../helpers/CartContext'
 import './CartWidget.css'
+
 
 
 
@@ -11,11 +11,15 @@ const CartWidget = () => {
 
     const [cartNumber, setCartNumber] = useState(0)
     
+    let number = 0;
+
     useEffect(()=>{
-        setCartNumber(0)
+        number = 0;
+        setCartNumber(number)
         cartProds.forEach(prod=>{
-            setCartNumber(cartNumber + prod.quantity)
+            number = (number + prod.quantity)
         })
+        setCartNumber(number);
     },[cartProds])
 
     

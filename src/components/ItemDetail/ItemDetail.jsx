@@ -1,9 +1,9 @@
 import React,{useState, useContext, useEffect} from 'react'
-import { CartContext } from '../../App';
+import { CartContext } from '../../helpers/CartContext';
+
 import ColorPicker from '../ColorPicker/ColorPicker';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
-
 
 const ItemDetail = ({data}) => {
 
