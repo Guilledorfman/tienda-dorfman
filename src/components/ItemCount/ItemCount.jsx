@@ -1,14 +1,14 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext } from 'react'
 
 import {Link} from 'react-router-dom'
-import { CartContext } from '../../helpers/CartContext'
+import {CartContext}  from '../../context/CartContext'
+
 import './ItemCount.css'
 
 const ItemCount = ({ data, cartState }) => {
+    
+    const { cartList , addToCart }= useContext(CartContext)
 
-    const { cartProds, setCartProds } = useContext(CartContext)
-    
-    
     const [productNumber, setProductNumber] = useState(1);
     const [stockClass, setStockClass] = useState('stock available');
 
@@ -30,19 +30,20 @@ const ItemCount = ({ data, cartState }) => {
         }
     }
 
-    function addToCart(){
-        setCartProds([...cartProds, {product:data[0].name, quantity: productNumber, price: data[0].price, id: data[0].id}])
+    function clickAddToCart(){
+
+        addToCart([{...data[0], quantity: productNumber}])
     }
 
     function goToCart(){
-        'ir al carrito'
+        'Terminar mi compra'
     }
 
     const AddToCartBtn = ()=>{
-        return <button className="btn btn-warning mt-3" onClick={addToCart}>Agregar al carrito</button>
+        return <button className="btn btn-warning mt-3" onClick={clickAddToCart}>Agregar al carrito</button>
     }
     const GoToCartBtn = ()=>{
-        return <Link to={"/cart"} className="btn btn-warning mt-3" onClick={goToCart}>Ir al carrito</Link>
+        return <Link to={"/cart"} className="btn btn-warning mt-3" onClick={goToCart}>Terminar mi compra</Link>
     }
 
 

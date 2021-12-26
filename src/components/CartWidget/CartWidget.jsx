@@ -1,5 +1,6 @@
-import React, { useContext, useState, useEffect } from 'react'
-import {CartContext} from '../../helpers/CartContext'
+import React, {  useState, useEffect, useContext } from 'react'
+import { CartContext } from '../../context/CartContext'
+
 import './CartWidget.css'
 
 
@@ -7,27 +8,27 @@ import './CartWidget.css'
 
 const CartWidget = () => {
 
-    const { cartProds } = useContext(CartContext)
+    const [cartNumber, setCartNumber] = useState(0);
 
-    const [cartNumber, setCartNumber] = useState(0)
+    const { cartList } = useContext(CartContext)
     
     let number = 0;
 
+    cartList.map(item=>{
+        number = number + item[0].quantity
+    })
+
     useEffect(()=>{
-        number = 0;
         setCartNumber(number)
-        cartProds.forEach(prod=>{
-            number = (number + prod.quantity)
-        })
-        setCartNumber(number);
-    },[cartProds])
+    },[number])
 
     
     return (
         <div>
             <button className='cart-btn'>
                 <i className="fas fa-shopping-cart fs-2 text-warning"></i>
-                {cartNumber > 0 ? <h5 className="text-warning">{cartNumber}</h5> : <></>}
+                {cartNumber > 0 ? <h2 className="cart-number">{cartNumber}</h2> : <></>}
+                
             </button>
         </div>
     )

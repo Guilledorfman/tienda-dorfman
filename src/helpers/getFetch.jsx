@@ -3,7 +3,7 @@ const productos = [
         name: 'Volca Sample',
         category:`sintetizadores`,
         type:"DIGITAL SAMPLE SEQUENCER",
-        price: 29.127,
+        price: 29127,
         colors: [
             {
                 text:'original',
@@ -37,7 +37,7 @@ const productos = [
         name: 'Volca Keys',
         category:`sintetizadores`,
         type:"ANALOGUE LOOP SYNTH",
-        price: 27.302,
+        price: 27302,
         colors: [
                         {
                 text:'original',
@@ -68,7 +68,7 @@ const productos = [
         name: 'Volca Bass',
         category:`sintetizadores`,
         type:"ANALOGUE BASS MACHINE",
-        price: 30.326,
+        price: 30326,
         colors: [
                         {
                 text:'original',
@@ -98,7 +98,7 @@ const productos = [
         name: 'Volca Beats',
         category:`sintetizadores`,
         type:"ANALOGUE RHYTHM MACHINE",
-        price: 37.011,
+        price: 37011,
         colors: [
                         {
                 text:'original',
@@ -128,7 +128,7 @@ const productos = [
         name: 'Volca Kick',
         category:`sintetizadores`,
         type:"ANALOGUE KICK GENERATOR",
-        price: 29.880,
+        price: 29880,
         colors: [
                         {
                 text:'original',
@@ -155,7 +155,7 @@ const productos = [
         name: 'Volca FM',
         category:`sintetizadores`,
         type:"DIGITAL FM SYNTHESIZER",
-        price: 28.316,
+        price: 28316,
         colors: [
                         {
                 text:'original',
@@ -175,7 +175,7 @@ const productos = [
         name: 'Volca mix',
         category:`audio`,
         type:"ANALOGUE PERFORMANCE MIXER",
-        price: 19.027,
+        price: 19027,
         colors: [
                         {
                 text:'original',
@@ -198,7 +198,7 @@ const productos = [
         name: 'Volca Drum',
         category:`sintetizadores`,
         type:"DIGITAL PERCUSSION SYNTHESIZER",
-        price: 36.761,
+        price: 36761,
         colors: [
                         {
                 text:'original',
@@ -219,7 +219,7 @@ const productos = [
         name: 'Volca Modular',
         category:`sintetizadores`,
         type:"MICRO MODULAR SYNTHESIZER",
-        price: 34.379,
+        price: 34379,
         colors: [
                         {
                 text:'original',
@@ -242,7 +242,7 @@ const productos = [
         name: 'MS-20 mini',
         category:`sintetizadores`,
         type:"MONOFONIC SYNTHESIZER",
-        price: 104.771,
+        price: 104771,
         colors: [
             {
                 text:'original',
@@ -271,7 +271,7 @@ const productos = [
         name: 'Monotron DELAY',
         category:`sintetizadores`,
         type:"ANALOGUE RIBBON SYNTHESIZER",
-        price: 8.527,
+        price: 8527,
         colors: [
             {
                 text:'original',
@@ -297,7 +297,7 @@ const productos = [
         name: 'Monotron DUO',
         category:`sintetizadores`,
         type:"ANALOGUE RIBBON SYNTHESIZER",
-        price: 8.845,
+        price: 8845,
         colors: [
                         {
                 text:'original',
@@ -323,7 +323,7 @@ const productos = [
         name: 'Monologue',
         category:`sintetizadores`,
         type:"MONOPHONIC ANALOGUE SYNTHESIZER",
-        price: 66.759,
+        price: 66759,
         colors:[
             {
                 text:'original',
@@ -371,7 +371,7 @@ const productos = [
         name: 'Minilogue',
         category:`sintetizadores`,
         type:"PHOLYPHONIC ANALOGUE SYNTHESIZER",
-        price: 88.385,
+        price: 88385,
         colors: [
                         {
                 text:'original',
@@ -397,7 +397,7 @@ const productos = [
         name: 'Minilogue xd',
         category:`sintetizadores`,
         type:"PHOLYPHONIC ANALOGUE SYNTHESIZER",
-        price: 114.535,
+        price: 114535,
         colors: [
                         {
                 text:'original',
@@ -425,7 +425,7 @@ const productos = [
         name: 'microKORG',
         category:`sintetizadores`,
         type:"SYNTHESIZER/VOCODER",
-        price: 68.914,
+        price: 68914,
         colors: [
                         {
                 text:'original',
@@ -458,7 +458,7 @@ const productos = [
         name: 'microKORG S',
         category:`sintetizadores`,
         type:"SYNTHESIZER/VOCODER",
-        price: 78.830,
+        price: 78830,
         colors: [
                         {
                 text:'original',
@@ -478,7 +478,7 @@ const productos = [
         name: 'microKORG XL +',
         category:`sintetizadores`,
         type:"SYNTHESIZER/VOCODER",
-        price: 78.824,
+        price: 78824,
         colors: [
                         {
                 text:'original',
@@ -505,7 +505,7 @@ const productos = [
         name: 'kingKORG',
         category:`sintetizadores`,
         type:"SYNTHESIZER",
-        price: 159.900,
+        price: 159900,
         colors: [
                         {
                 text:'original',
@@ -532,7 +532,7 @@ const productos = [
         name:`Krk Classic 5`,
         category:`sonido`,
         type:`MONITORES POTENCIADOS`,
-        price:65.999,
+        price: 65999,
         colors: [
                         {
                 text:'original',
@@ -556,7 +556,7 @@ const productos = [
         name:`Mackie Cr3-xbt`,
         category:`sonido`,
         type:`MONITORES ACTIVOS MULTIMEDIA`,
-        price:`30.435`,
+        price: 30435,
         colors: [
                         {
                 text:'original',
@@ -588,7 +588,7 @@ const productos = [
         name:`RE-20`,
         category:`efectos`,
         type:`SPACE ECHO`,
-        price:`12.000`,
+        price: 12000,
         colors: [
                         {
                 text:'original',
@@ -611,7 +611,7 @@ const productos = [
         name:`DD-8 `,
         category:`efectos`,
         type:`DIGITAL DELAY`,
-        price:10.000,
+        price: 10000,
         colors: [
                         {
                 text:'original',
@@ -634,7 +634,7 @@ const productos = [
         name:`Cable interpedal`,
         category:`accesorios`,
         type:`CABLES`,
-        price:300,
+        price: 300,
         colors: [
                         {
                 text:'original',

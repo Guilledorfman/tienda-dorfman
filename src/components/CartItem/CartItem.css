@@ -1,0 +1,22 @@
+.cartListItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cartListItem>i{
+    cursor:pointer;
+    font-size: 2rem;
+}
+
+.cartListItem>.img-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartListItem>.img-cont>img{
+    width: 200px;
+}

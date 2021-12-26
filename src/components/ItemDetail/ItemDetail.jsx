@@ -1,23 +1,23 @@
-import React,{useState, useContext, useEffect} from 'react'
-import { CartContext } from '../../helpers/CartContext';
+import React, {  useState, useEffect, useContext  } from 'react'
 
+import {CartContext}  from '../../context/CartContext'
 import ColorPicker from '../ColorPicker/ColorPicker';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
 
 const ItemDetail = ({data}) => {
 
-    const { cartProds } = useContext(CartContext)
+    const { cartList , addToCart }= useContext(CartContext)
     const [option, setOption] = useState(data[0].colors[0].img);
     const [cartState, setCartState] = useState(false);
 
 
     useEffect(()=>{
         isInCart(data[0].id)
-    },[cartProds])
+    },[cartList])
 
     function isInCart(id){
-        const isItInCart = cartProds.find(prod => prod.id === id);
+        const isItInCart = cartList.find(prod => prod[0].id === id);
         if(isItInCart){
             setCartState(true);
         }else{
