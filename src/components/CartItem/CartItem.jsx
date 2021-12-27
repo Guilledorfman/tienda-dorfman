@@ -12,7 +12,7 @@ const CartItem = ( {item, index} ) => {
     const [ subTotal, setSubTotal ] = useState(0)
 
     useEffect(()=>{
-        setSubTotal(cartList[index][0].price * cartList[index][0].quantity)
+        setSubTotal(cartList[index].price * cartList[index].quantity)
     },[cartList])
 
     return (
@@ -24,7 +24,7 @@ const CartItem = ( {item, index} ) => {
             </div>
 
             <div className="quantity-cont">
-                <h2>x {cartList[index][0].quantity}</h2>
+                <h2>x {cartList[index].quantity}</h2>
 
                 <div>   
                     <button onClick={()=>cartItemDecrease(index)}>-</button>
@@ -37,7 +37,7 @@ const CartItem = ( {item, index} ) => {
                 <b>${subTotal}</b>
             </div>
 
-            <i className="fas fa-trash-alt" onClick={()=>cartItemDelete(index)} ></i>
+            <i className="fas fa-trash-alt" onClick={()=>cartItemDelete(item.id)} ></i>
         </div>
     )
 }

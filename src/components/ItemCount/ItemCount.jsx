@@ -6,7 +6,7 @@ import {CartContext}  from '../../context/CartContext'
 import './ItemCount.css'
 
 const ItemCount = ({ data, cartState }) => {
-    
+
     const { cartList , addToCart }= useContext(CartContext)
 
     const [productNumber, setProductNumber] = useState(1);
@@ -20,7 +20,7 @@ const ItemCount = ({ data, cartState }) => {
         },200)
     }
     function addProduct(){
-        productNumber < data[0].stock ? setProductNumber(productNumber + 1) : alertStock();
+        productNumber < data.stock ? setProductNumber(productNumber + 1) : alertStock();
         
     }
     function removeProduct(){
@@ -32,7 +32,7 @@ const ItemCount = ({ data, cartState }) => {
 
     function clickAddToCart(){
 
-        addToCart([{...data[0], quantity: productNumber}])
+        addToCart({...data, quantity: productNumber})
     }
 
     function goToCart(){
@@ -56,7 +56,7 @@ const ItemCount = ({ data, cartState }) => {
                         
                         
                         <>
-                            <h5 className={stockClass}>Stock: {data[0].stock}</h5>
+                            <h5 className={stockClass}>Stock: {data.stock}</h5>
                             <div className="buy-btn d-flex justify-content-between">
                                 <button onClick={removeProduct} className="btn btn-warning">-</button>
                                 <h2 className="">{productNumber}</h2>

@@ -14,20 +14,18 @@ function CartContextProvider( { children } ) {
         setCartList([])
     }
 
-    function cartItemDelete(index) {
-        const newCart = [...cartList];
-        newCart.splice(index, 1)
+    function cartItemDelete(id) {
 
-        setCartList(newCart)
+        setCartList(cartList.filter(prods => prods.id !== id))
 
     }
     
     function cartItemIncrease(index){
         
         
-        if(cartList[index][0].quantity < cartList[index][0].stock){
+        if(cartList[index].quantity < cartList[index].stock){
             const newArr = [...cartList];
-            newArr[index][0].quantity = newArr[index][0].quantity + 1;
+            newArr[index].quantity = newArr[index].quantity + 1;
             setCartList(newArr)
         }else{
             console.log('No hay mas stock');
@@ -37,9 +35,9 @@ function CartContextProvider( { children } ) {
     }
     function cartItemDecrease(index){
         
-        if(cartList[index][0].quantity > 1){
+        if(cartList[index].quantity > 1){
             const newArr = [...cartList];
-            newArr[index][0].quantity = newArr[index][0].quantity - 1;
+            newArr[index].quantity = newArr[index].quantity - 1;
             setCartList(newArr)
 
         }

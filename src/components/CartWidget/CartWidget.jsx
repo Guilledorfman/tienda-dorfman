@@ -15,7 +15,7 @@ const CartWidget = () => {
     let number = 0;
 
     cartList.map(item=>{
-        number = number + item[0].quantity
+        number = number + item.quantity
     })
 
     useEffect(()=>{

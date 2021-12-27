@@ -13,7 +13,7 @@ function Cart() {
     let totalNumber = 0;
 
     cartList.map(item=>{
-        const subtotal = item[0].price * item[0].quantity
+        const subtotal = item.price * item.quantity
         totalNumber = totalNumber + subtotal
     })
 
@@ -25,7 +25,7 @@ function Cart() {
     const ShowList = cartList.map((item, index)=>{
 
         return(
-                <CartItem key={item[0].id} item={item[0]} index={index}/>
+                <CartItem key={item.id} item={item} index={index}/>
         )
     })
 

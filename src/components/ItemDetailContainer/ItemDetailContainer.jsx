@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
     
     useEffect(() => {
         if(idItem){
-            getFetch.then(res=> setProduct(res.filter(prod => prod.id === parseInt(idItem))))
+            getFetch.then(res=> setProduct(res.find(prod => prod.id === parseInt(idItem))))
             .catch(err=> console.log(err))
             .finally(()=> setLoading(false))
         }else{
