@@ -4,6 +4,9 @@ import { getFetch } from '../../helpers/getFetch'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 
+import { css } from "@emotion/react";
+import ScaleLoader from "react-spinners/ScaleLoader";
+
 import {collection, doc, getDoc, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 const ItemListContainer = () => {
@@ -16,20 +19,26 @@ const ItemListContainer = () => {
 
     const { idCate } = useParams()
 
+    const override = css`
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+`;
 
     
-    useEffect(() => {
-        if(idCate){
-            getFetch.then(res=> setProducts(res.filter(prod => prod.category === idCate)))
-            .catch(err=> console.log(err))
-            .finally(()=> setLoading(false))
-        }else{
-            getFetch.then(res=> setProducts(res))
-            .catch(err=> console.log(err))
-            .finally(()=> setLoading(false))
+    // useEffect(() => {
+    //     if(idCate){
+    //         getFetch.then(res=> setProducts(res.filter(prod => prod.category === idCate)))
+    //         .catch(err=> console.log(err))
+    //         .finally(()=> setLoading(false))
+    //     }else{
+    //         getFetch.then(res=> setProducts(res))
+    //         .catch(err=> console.log(err))
+    //         .finally(()=> setLoading(false))
             
-        }
-    },[idCate]);
+    //     }
+    // },[idCate]);
 
 
 //     useEffect(() => {
@@ -41,25 +50,33 @@ const ItemListContainer = () => {
 
 // console.log(producto);
 
-//     useEffect(() => {
+    useEffect(() => {
 
-//         const db = getFirestore()
+        const db = getFirestore()
+        if(idCate){
+            const queryCollection = query(collection(db, 'items'), where('category', '==', idCate  ))
+            getDocs(queryCollection)
+            .then((resp) => {
+                setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
+            })
+            .catch(err => console.log(err))
+            .finally(()=> setLoading(false))
+        }else{
+            const queryCollection = query(collection(db, 'items'))
+            getDocs(queryCollection)
+            .then((resp) => {
+                setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
+            })
+            .catch(err => console.log(err))
+            .finally(()=> setLoading(false))
+        }
 
-//         const queryCollection = query(collection(db, 'items'), where('price', '>', 100000  ))
-//         getDocs(queryCollection)
-//         .then((resp) => {
-//             setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
-//         })
-//         .catch(err => console.log(err))
-//         .finally(()=> setLoading(false))
+    },[idCate]);
 
-//     },[idCate]);
-
-// console.log(products);
     
     return (
         <div className="main-content d-flex flex-wrap justify-content-around text-center">
-            {loading ? <img className="loading" src="https://support.lenovo.com/esv4/images/loading.gif" alt="LOADING..."/>: <ItemList data={products}/>}
+            {loading ? <ScaleLoader color={'#ffc107'} loading={loading} css={override} size={150} height={60} width={40}/>: <ItemList data={products}/>}
         </div>
     )
 }

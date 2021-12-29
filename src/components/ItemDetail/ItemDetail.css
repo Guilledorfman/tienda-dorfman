@@ -8,6 +8,10 @@
     min-width: 300px;
     overflow: auto;
 }
+.detailImg{
+    width: 80%;
+    margin: auto;
+}
 .detailImg-cont{
 
     display: flex;
