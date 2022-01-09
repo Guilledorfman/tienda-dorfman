@@ -20,3 +20,15 @@
 .cartListItem>.img-cont>img{
     width: 200px;
 }
+
+.stock{
+    transition: all .2s ease;
+}
+
+.available{
+    color: black;
+}
+.unavailable{
+    transform: scale(110%);
+    color: red;
+}

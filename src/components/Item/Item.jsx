@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
 import './Item.css'
 
-const Product = ({name, photo, price, description, stock, type, id}) => {
+const Product = ({name, photo, price, stock, type, id}) => {
 
     return (
         <div className="itemCard card m-1 mb-5 border-0">

@@ -3,13 +3,12 @@ import { CartContext } from '../../context/CartContext'
 import CartItem from '../CartItem/CartItem'
 import {Link} from 'react-router-dom'
 
-import {addDoc, collection, getFirestore, query,Timestamp, updateDoc, where, writeBatch } from 'firebase/firestore';
 import BuyForm from '../BuyForm/BuyForm';
 
 
 function Cart() {
     
-    const { cartList, emptyCart, deleteCartItem } = useContext(CartContext)
+    const { cartList, emptyCart } = useContext(CartContext)
     const [ total, setTotal ] = useState(0);
     const [order, setOrder] = useState({})
 
@@ -41,34 +40,6 @@ function Cart() {
 
         setModal(true)
 
-        
-        // const db = getFirestore()
-        // const orderCollection = collection(db, 'orders')
-        // addDoc(orderCollection, order)
-        // .then(resp=> console.log(resp._key.path.segments[1]))
-        // .catch(err=> console.log(err))
-        
-        // modificar update
-        // const db = getFirestore()
-        // const docEdit = doc(db, 'items', 'id')
-        // updateDoc(docEdit, {
-            //     stock: 99
-            // })
-            // .then(resp=> console.log())
-            
-            //modificar batch
-            
-        // const db = getFirestore()
-        // const docEdit = doc(db, 'items', 'id')
-        // const docEdit2 = doc(db, 'items', id2)
-        // const batch = writeBatch(db)
-        // batch.update(docEdit, {
-        //     stock: 90
-        // })
-        // batch.update(docEdit2,{
-        //     stock: 99
-        // })
-        // batch.commit()
     }
 
 

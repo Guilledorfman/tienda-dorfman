@@ -6,7 +6,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css'
 
 const ItemDetail = ({data}) => {
-    const { cartList , addToCart }= useContext(CartContext)
+    const { cartList }= useContext(CartContext)
     const [option, setOption] = useState(data.colors[0].img);
     const [cartState, setCartState] = useState(false);
 

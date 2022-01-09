@@ -1,20 +1,18 @@
 import React,{useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
-import { getFetch } from '../../helpers/getFetch'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 
 import { css } from "@emotion/react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
-import {collection, doc, getDoc, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import {collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 const ItemListContainer = () => {
 
 
 
     const [products, setProducts] = useState([]);
-    const [producto, setProducto] = useState({});
     const [loading, setLoading] = useState(true);
 
     const { idCate } = useParams()
@@ -25,30 +23,6 @@ const ItemListContainer = () => {
     margin-right: auto;
     margin-top: 100px;
 `;
-
-    
-    // useEffect(() => {
-    //     if(idCate){
-    //         getFetch.then(res=> setProducts(res.filter(prod => prod.category === idCate)))
-    //         .catch(err=> console.log(err))
-    //         .finally(()=> setLoading(false))
-    //     }else{
-    //         getFetch.then(res=> setProducts(res))
-    //         .catch(err=> console.log(err))
-    //         .finally(()=> setLoading(false))
-            
-    //     }
-    // },[idCate]);
-
-
-//     useEffect(() => {
-//         const db = getFirestore()
-//         const queryDB = doc(db, 'items', 'JD85O1lZIxE1HDPmwBBA')
-//         getDoc(queryDB)
-//         .then(resp => setProducto({ id: resp.id, ...resp.data() }))
-//     },[idCate]);
-
-// console.log(producto);
 
     useEffect(() => {
 

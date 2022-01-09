@@ -6,17 +6,6 @@ import Carousel from 'react-bootstrap/Carousel';
 const Welcome = () => {
     return (
                 <Carousel className="d-flex mb-2">
-                    {/* <Carousel.Item className="carousel-item">
-                        <img
-                        className="d-block w-100"
-                        src="https://static.wixstatic.com/media/5ca11b_5ce1e560d5d443a089a087a3ac49ee91~mv2_d_4043_2303_s_2.jpg/v1/fill/w_4043,h_2303,al_c,q_85/5ca11b_5ce1e560d5d443a089a087a3ac49ee91~mv2_d_4043_2303_s_2.jpg"
-                        alt="First slide"
-                        />
-                        <Carousel.Caption className="caption">
-                        <h3>Welcome to my E-commerce</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item> */}
                     <Carousel.Item>
                         <img
                         className="d-block w-100"

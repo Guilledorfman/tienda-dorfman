@@ -5,8 +5,27 @@ import './CartItem.css'
 
 const CartItem = ( {item, index} ) => {
 
-    const { cartList, emptyCart, cartItemIncrease, cartItemDecrease, cartItemDelete } = useContext(CartContext)
+    const { cartList, cartItemIncrease, cartItemDecrease, cartItemDelete } = useContext(CartContext)
+    const [stockClass, setStockClass] = useState('stock available');
+    const [maxStock, setMaxStock] = useState(false);
     const [itemQuantity, setItemQuantity] = useState(item.quantity)
+
+    
+    function alertStock(){
+
+        setStockClass('stock unavailable')
+        setTimeout(()=>{
+            setStockClass('stock available')
+        },200)
+    }
+
+    function checkStock(){
+
+        if (cartItemIncrease(index) === false){
+            alertStock();
+        }  
+            
+    }
 
 
     const [ subTotal, setSubTotal ] = useState(0)
@@ -24,11 +43,10 @@ const CartItem = ( {item, index} ) => {
             </div>
 
             <div className="quantity-cont">
-                <h2>x {cartList[index].quantity}</h2>
-
+                <h2 className={stockClass}>x {cartList[index].quantity}</h2>
                 <div>   
                     <button onClick={()=>cartItemDecrease(index)}>-</button>
-                    <button onClick={()=>cartItemIncrease(index)}>+</button>
+                    <button onClick={()=>checkStock()}>+</button>
                 </div>
             </div>
 

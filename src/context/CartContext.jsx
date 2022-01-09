@@ -28,7 +28,7 @@ function CartContextProvider( { children } ) {
             newArr[index].quantity = newArr[index].quantity + 1;
             setCartList(newArr)
         }else{
-            console.log('No hay mas stock');
+            return(false)
         }
         
 
