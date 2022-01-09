@@ -33,25 +33,25 @@ const NavBar = () => {
                                     Categorías
                                 </div>
                                 <ul className="dropdown-menu">
-                                    <li className="dropdown-item"><Link to={'/categoria/sintetizadores'}>Teclados y sintetizadores</Link></li>
-                                    <li className="dropdown-item"><Link to={'/categoria/sonido'}>Sonido y grabación</Link></li>
-                                    <li className="dropdown-item"><Link to={'/categoria/efectos'}>Efectos</Link></li>
-                                    <li className="dropdown-item"><Link to={'/categoria/accesorios'}>Accesorios</Link></li>
+                                    <li className="dropdown-item"><Link className="categoria" to={'/categoria/sintetizadores'}>Teclados y sintetizadores</Link></li>
+                                    <li className="dropdown-item"><Link className="categoria" to={'/categoria/sonido'}>Sonido y grabación</Link></li>
+                                    <li className="dropdown-item"><Link className="categoria" to={'/categoria/efectos'}>Efectos</Link></li>
+                                    <li className="dropdown-item"><Link className="categoria" to={'/categoria/accesorios'}>Accesorios</Link></li>
                                 </ul>
                             </button>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <form className="d-flex me-auto">
                                 <input className="search form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Search"/>
                                 <button className="btn btn-outline-warning" type="submit">Buscar</button>
                             </form>
-                        </li>
+                        </li> */}
                         <li className="nav-item mx-4 text-light">
-                            Ayuda
+                            About
                         </li>
                     </ul>
                 </div>
-                <div className="dropdown">
+                {/* <div className="dropdown">
                     <div className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
                         <i className="fas fa-user-circle fs-1 text-warning mr-2"></i>
                     </div>
@@ -59,7 +59,7 @@ const NavBar = () => {
                         <li role='presentation'><div className="dropdown-item">Mi cuenta</div></li>
                         <li role='presentation'><div className="dropdown-item">Cerrar sesión</div></li>
                     </ul>
-                </div>
+                </div> */}
             </nav>
     )
 }

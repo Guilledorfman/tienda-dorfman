@@ -35,15 +35,19 @@ const ItemCount = ({ data, cartState }) => {
         addToCart({...data, quantity: productNumber})
     }
 
-    function goToCart(){
-        'Terminar mi compra'
-    }
 
     const AddToCartBtn = ()=>{
         return <button className="btn btn-warning mt-3" onClick={clickAddToCart}>Agregar al carrito</button>
     }
     const GoToCartBtn = ()=>{
-        return <Link to={"/cart"} className="btn btn-warning mt-3" onClick={goToCart}>Terminar mi compra</Link>
+        return(
+            
+            <>
+             - Hay { cartList.find(item => item.id === data.id).quantity} en tu carrito -
+            <Link to={"/"} className="btn btn-warning mt-3">Seguir comprando</Link>
+            <Link to={"/cart"} className="btn btn-success mt-3">Terminar mi compra</Link>
+            </>
+        ) 
     }
 
 

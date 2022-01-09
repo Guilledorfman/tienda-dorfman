@@ -1,0 +1,74 @@
+.buyform{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 50000;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.411);
+    display: flex;
+}
+
+.buyform>.form{
+    margin: auto;
+    display: flex;
+    background-color: white;
+    position: relative;
+    width: 60%;
+    min-width: 300px;
+}
+.buyerform{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.buyerform>h5{
+    padding-left: 30px;
+    font-size: 1rem;
+}
+.buyerform>input{
+    margin: auto;
+    width: 90%;
+    height: 100%;
+}
+.bar{
+    width: 100%;
+    padding: 5px;
+}
+.closeicon{
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 3px;
+}
+
+.alert{
+    position: relative;
+    font-size: .8rem;
+    height: 80px;
+    right: 0;
+    text-align: center;
+        
+}
+
+.loading{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 30px;
+    z-index: 6000000;
+}
+
+.end{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderId{
+    font-size: 1.4rem;
+    outline: 3px solid #FFC107;
+    padding: 3px;
+}

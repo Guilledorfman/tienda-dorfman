@@ -9,6 +9,8 @@ import ScaleLoader from "react-spinners/ScaleLoader";
 import {collection, doc, getDoc, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
+
+
     const color = "#ffc107";
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
