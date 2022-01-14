@@ -1,6 +1,6 @@
 .carousel{
     width: 100%;
-    max-height: 200px;
+    /* max-height: 200px; */
     margin: auto;    
 }
 .carousel-item{
@@ -8,9 +8,7 @@
     
 }
 .carousel-item>img{
-    object-fit: cover;
-    width: 200%;
-    height: 200%;
+    object-fit: contain;
 }
 
 .caption>h3{

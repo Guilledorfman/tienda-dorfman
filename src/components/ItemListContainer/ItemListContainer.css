@@ -1,11 +1,22 @@
 .main-content{
     height: 100%;
-    width: 90%;
+    width: 100%;
     min-width: 260px;
     margin: auto;
+    background-color: #EBEBEB;
 }
 
 .loading{
     width: 100px;
     height: 100px;
 }
+
+.main-content-border{
+    padding: 100px;
+}
+
+@media only screen and (max-width: 800px) {
+    .main-content-border {
+      padding: 10px;
+    }
+  }

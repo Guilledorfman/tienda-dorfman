@@ -26,12 +26,28 @@ a:hover{
 .categoria{
     font-size: 1.3rem;
     padding: 30px;
-    display: flex;
-    align-items: center;
     width: 100%;
     color: white;
 }
 .categoria:hover{
     background-color: #FFC107;
     color: white;
+}
+
+.cartWidget{
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    position: absolute;
+    right: 30px;
+    top: 50px;
+    z-index: 3000;
+}
+
+.toggle-btn{
+    position: absolute;
+    top: 50px;
+    right: 100px;
 }

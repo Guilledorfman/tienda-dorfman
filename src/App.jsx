@@ -1,14 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import  CartContextProvider  from "./context/CartContext";
 
-
-import "bootstrap/dist/css/bootstrap.css"
 import NavBar from './components/NavBar/NavBar'
 import './App.css';
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Welcome from "./components/Welcome/Welcome";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import Cart from "./components/Cart/Cart";
+import Footer from "./components/Footer/Footer";
 
 
 function App({}) {
@@ -25,6 +24,7 @@ function App({}) {
             <Route exact path="/categoria/:idCate" element={<ItemListContainer/>}/>
             <Route exact path="/item/:idItem" element={<ItemDetailContainer/>}/>
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </CartContextProvider>
 

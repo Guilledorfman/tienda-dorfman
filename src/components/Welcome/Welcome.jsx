@@ -9,26 +9,16 @@ const Welcome = () => {
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="https://cdn.korg.com/es/products/upload/7fdcd5d2861bfb6cf2ced09f6ae110a8.jpg"
+                        src="https://res.cloudinary.com/dxoqq4yvo/image/upload/v1642135897/coderhouse-react-tienda/descuentos_jisqe9.jpg"
                         alt="Second slide"
                         />
-
-                        <Carousel.Caption className="caption">
-                        <h3>Sintetizadores</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="https://cdn.korg.com/es/products/upload/ecc9eb011296db4a50974b3b18c100d7.jpg"
+                        src="https://res.cloudinary.com/dxoqq4yvo/image/upload/v1642134505/coderhouse-react-tienda/mediosdepago2_ftfren.jpg"
                         alt="Third slide"
                         />
-
-                        <Carousel.Caption className="caption">
-                        <h3>Efectos</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
 

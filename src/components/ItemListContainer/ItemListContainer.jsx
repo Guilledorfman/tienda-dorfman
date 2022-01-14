@@ -2,11 +2,12 @@ import React,{useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
-
 import { css } from "@emotion/react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 import {collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import BreadcrumbContainer from '../BreadcrumbContainer/BreadcrumbContainer';
+
 
 const ItemListContainer = () => {
 
@@ -49,8 +50,12 @@ const ItemListContainer = () => {
 
     
     return (
-        <div className="main-content d-flex flex-wrap justify-content-around text-center">
-            {loading ? <ScaleLoader color={'#ffc107'} loading={loading} css={override} size={150} height={60} width={40}/>: <ItemList data={products}/>}
+        <div className="main-content d-flex flex-column flex-wrap justify-content-around text-center">
+            <div className="main-content-border">
+                {idCate ? <BreadcrumbContainer idCate={idCate}/> : <></>}
+            
+                {loading ? <ScaleLoader color={'#ffc107'} loading={loading} css={override} size={150} height={60} width={40}/>: <ItemList data={products}/>}
+            </div>
         </div>
     )
 }
