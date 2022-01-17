@@ -27,9 +27,9 @@ const Footer = () => {
                 <div className="where">
                     <h4>¿DÓNDE ESTAMOS?</h4>
                     <h5>Calle Falsa 123, CABA</h5>
-                    <h5><i class="fas fa-phone"></i>45651324</h5>
+                    <h5><i className="fas fa-phone"></i>45651324</h5>
                     <p>De Lunes a Viernes de 10 a 19 - Sabados y Domingos - CERRADO</p>
-                    <p><i class="far fa-envelope"></i>info@tiendafalsa.com</p>
+                    <p><i className="far fa-envelope"></i>info@tiendafalsa.com</p>
                 </div>
 
             </div>
