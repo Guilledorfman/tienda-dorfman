@@ -1,4 +1,13 @@
 .counter{
-    width: 100%;
     height: 100%;
+}
+.edit-delete{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.edit-delete>i{
+    cursor: pointer;
 }

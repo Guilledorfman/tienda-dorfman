@@ -1,0 +1,13 @@
+.checkOrderForm{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 300px;
+    height: 200px;
+}
+.checkOrderForm>button{
+    margin: auto;
+    width: 60px;
+}

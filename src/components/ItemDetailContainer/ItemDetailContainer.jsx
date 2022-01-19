@@ -13,6 +13,7 @@ const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [ error, setError ] = useState(false);
 
     const { idItem } = useParams()
 
@@ -29,7 +30,7 @@ const ItemDetailContainer = () => {
             const db = getFirestore()
             const queryDB = doc(db, 'items', idItem)
             getDoc(queryDB)
-            .then(resp => setProduct({ id: resp.id, ...resp.data() }))
+            .then(resp => !(resp.data() === undefined) ? setProduct({ id: resp.id, ...resp.data() }) : setError(true) )
             .catch(err=> console.log(err))
             .finally(()=> setLoading(false))
             
@@ -40,7 +41,7 @@ const ItemDetailContainer = () => {
     return (
         <div className="ItemDetailContainer">
                   
-            {loading ?   <ScaleLoader color={'#ffc107'} loading={loading} css={override} size={150} height={60} width={40}/>: <ItemDetail data={product}/>}
+            {loading ?   <ScaleLoader color={'#ffc107'} loading={loading} css={override} size={150} height={60} width={40}/>: <ItemDetail data={product} error={error}/>}
         </div>
     )
 }

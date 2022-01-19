@@ -7,8 +7,6 @@ const CartItem = ( {item, index} ) => {
 
     const { cartList, cartItemIncrease, cartItemDecrease, cartItemDelete } = useContext(CartContext)
     const [stockClass, setStockClass] = useState('stock available');
-    const [maxStock, setMaxStock] = useState(false);
-    const [itemQuantity, setItemQuantity] = useState(item.quantity)
 
     
     function alertStock(){
@@ -33,7 +31,6 @@ const CartItem = ( {item, index} ) => {
     useEffect(()=>{
         setSubTotal(cartList[index].price * cartList[index].quantity)
     },[cartList])
-
     return (
         <div className="cartListItem card">
             <div className="img-cont">
@@ -44,9 +41,9 @@ const CartItem = ( {item, index} ) => {
 
             <div className="quantity-cont">
                 <h2 className={stockClass}>x {cartList[index].quantity}</h2>
-                <div>   
-                    <button onClick={()=>cartItemDecrease(index)}>-</button>
-                    <button onClick={()=>checkStock()}>+</button>
+                <div className="counter-buttons">   
+                    <button className="btn btn-warning" onClick={()=>cartItemDecrease(index)}>-</button>
+                    <button className="btn btn-warning" onClick={()=>checkStock()}>+</button>
                 </div>
             </div>
 

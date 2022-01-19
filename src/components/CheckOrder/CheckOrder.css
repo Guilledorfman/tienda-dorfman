@@ -1,0 +1,23 @@
+.checkorder-response{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-product{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+
+.order-product-name{
+    width: 200px;
+}
+.order-product-price{
+    width: 100px;
+}
+.order-product-quantity{
+    width: 50px;
+}

@@ -2,6 +2,7 @@ import React,{ useContext, useState, useEffect } from 'react'
 import { CartContext } from '../../context/CartContext'
 import CartItem from '../CartItem/CartItem'
 import {Link} from 'react-router-dom'
+import './Cart.css'
 
 import BuyForm from '../BuyForm/BuyForm';
 
@@ -55,7 +56,7 @@ function Cart() {
         <BuyForm onClose={()=> setModal(false)} modal={modal} order={order}/>
             {
             cartList.length > 0 ? 
-            <div>
+            <div className="cart-cont">
                 {ShowList} 
                 <div className="text-center">
                     <h2 >total: ${total}</h2>
@@ -63,7 +64,8 @@ function Cart() {
                     <button className='text-center btn btn-success' onClick={buy}>COMPRAR</button>
                 </div>
             </div>:
-            <div className="text-center">
+            <div className="empty cart-cont text-center">
+                <img src="https://res.cloudinary.com/dxoqq4yvo/image/upload/v1642599359/coderhouse-react-tienda/PinClipart.com_shopping-cart-clipart-black_1395741_bneufh.png" alt="" />
                 <h2>Tu carrito está vacío</h2>
                 <Link className="btn btn-warning" to={'/'}>Volver</Link>
             </div>

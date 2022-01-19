@@ -46,3 +46,17 @@
 .buy-btn{
     width: 100%;
 }
+.error{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.error>img{
+    width: 500px;
+}
+.error>.btn{
+    width: 70px;
+}

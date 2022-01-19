@@ -32,3 +32,16 @@
     transform: scale(110%);
     color: red;
 }
+.quantity-cont{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.counter-buttons{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}

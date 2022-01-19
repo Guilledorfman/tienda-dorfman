@@ -1,0 +1,10 @@
+.cart-cont{
+    margin-bottom: 100px;
+}
+
+.empty{
+    margin-top: 50px;
+}
+.empty>img{
+    max-width: 200px;
+}

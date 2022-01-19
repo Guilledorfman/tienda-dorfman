@@ -1,10 +1,12 @@
 import {Link} from 'react-router-dom'
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import React from 'react'
 import './NavBar.css'
 import CartWidget from '../CartWidget/CartWidget';
+import NavBarDropdown from '../NavBarDropdown/NavBarDropdown';
 
-const NavBar = () => {
+
+const NavBar = ({categories, loading}) => {
     return (
 
                     <Navbar bg="dark" variant='dark' expand="lg" className='px-5 border-4 border-bottom border-warning'>
@@ -21,14 +23,12 @@ const NavBar = () => {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" className="toggle-btn btn btn-outline-warning text-warning" />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="me-auto">
-                                    <NavDropdown title="Categorías" id="basic-nav-dropdown">
-                                        <Link to={'/categoria/sintetizadores'} className="categoria fs-5 text-center d-flex align-items-center" >Teclados y sintetizadores</Link>
-                                        <Link to={'/categoria/sonido'} className="categoria fs-5 text-center d-flex align-items-center" >Sonido y grabación</Link>
-                                        <Link to={'/categoria/efectos'} className="categoria fs-5 text-center d-flex align-items-center" >Efectos</Link>
-                                        <Link to={'/categoria/accesorios'} className="categoria fs-5 text-center d-flex align-items-center" >Accesorios</Link>
-                                    </NavDropdown>
+                                        {!loading ?
+                                        <NavBarDropdown categories={categories} loading={loading}/>
+                                        : <></>
+                                    }
                                 </Nav>
-                                <Link to="/checkorder">Seguimiento de pedido</Link>
+                                <Link className="text-primary" to="/checkorder">Seguimiento de pedido</Link>
                             </Navbar.Collapse>
                              <div className="navbar-nav flex-row">
                             <Link className="cartWidget" to={"/cart"}><CartWidget/></Link>

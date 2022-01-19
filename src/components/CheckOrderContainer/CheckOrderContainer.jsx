@@ -45,7 +45,7 @@ function checkOrder(){
                 <div className="checkOrderForm">
                     <h2>Ingrese el ID para comprobar el estado de su pedido</h2>
                     <input onChange={changeId} id="checkorder-input" type="text" />
-                    <button onClick={checkOrder}>Ok</button>
+                    <button className="btn btn-warning" onClick={checkOrder}>Ok</button>
                 </div>
                 : 
                 <CheckOrder order={order} loading={loading} status={status}/>

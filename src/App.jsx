@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import  CartContextProvider  from "./context/CartContext";
 
-import NavBar from './components/NavBar/NavBar'
+import NavBarContainer from './components/NavBarContainer/NavBarContainer'
 import './App.css';
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import Welcome from "./components/Welcome/Welcome";
@@ -17,7 +17,7 @@ function App({}) {
     <div className="main-cont">
       <CartContextProvider>
         <BrowserRouter>
-          <NavBar/>
+          <NavBarContainer/>
           <Welcome/>
           <Routes>
             <Route exact path="/" element={<ItemListContainer/>}/>
