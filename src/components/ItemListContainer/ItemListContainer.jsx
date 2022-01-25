@@ -27,32 +27,28 @@ const ItemListContainer = () => {
 
     useEffect(() => {
 
+        
         const db = getFirestore()
-        if(idCate){
-            const queryCollection = query(collection(db, 'items'), where('category', '==', idCate  ))
-            getDocs(queryCollection)
-            .then((resp) => {
-                setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
-            })
-            .catch(err => console.log(err))
-            .finally(()=> setLoading(false))
-        }else{
-            const queryCollection = query(collection(db, 'items'))
-            getDocs(queryCollection)
-            .then((resp) => {
-                setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
-            })
-            .catch(err => console.log(err))
-            .finally(()=> setLoading(false))
-        }
 
+        const queryCollection = idCate ?
+        query(collection(db, 'items'), where('category', '==', idCate  ))
+        :
+        query(collection(db, 'items'))
+        
+        getDocs(queryCollection)
+        .then((resp) => {
+        setProducts(resp.docs.map((prod) => ({ id: prod.id, ...prod.data() })))
+        })
+        .catch(err => console.log(err))
+        .finally(()=> setLoading(false))
+
+        
     },[idCate]);
-
     
     return (
         <div className="main-content d-flex flex-column flex-wrap justify-content-around text-center">
             <div className="main-content-border">
-                {idCate ? <BreadcrumbContainer idCate={idCate}/> : <></>}
+                {idCate ? <BreadcrumbContainer currentCate={idCate}/> : <></>}
             
                 {loading ? <ScaleLoader color={'#ffc107'} loading={loading} css={override} size={150} height={60} width={40}/>: <ItemList data={products}/>}
             </div>

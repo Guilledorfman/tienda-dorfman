@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {CartContext}  from '../../context/CartContext'
 import ColorPicker from '../ColorPicker/ColorPicker';
 import ItemCount from '../ItemCount/ItemCount';
+import BreadcrumbContainer from '../BreadcrumbContainer/BreadcrumbContainer';
 import './ItemDetail.css'
 
 const ItemDetail = ({data, error}) => {
@@ -41,6 +42,7 @@ const ItemDetail = ({data, error}) => {
                 :
                 
                 <div className="ItemDetail">
+                    <BreadcrumbContainer currentCate={data.category}/>
                     <div className="row g-0">
                         <div className="col-md-6 detailImg-cont">
                             <img src={option} className="detailImg img-fluid rounded-start" alt={data.name}/>
